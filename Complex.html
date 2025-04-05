@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Lugar Paradisiáco</title>
+</head>
+    <link rel="stylesheet" href="styles/main.css">
+<body>
+<div style="margin-top: 160px;" class="ascii-art">       
+         ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+        ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+        ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌ ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ 
+        ▐░▌          ▐░▌       ▐░▌     ▐░▌     ▐░▌          
+        ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌     ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ 
+        ▐░▌          ▐░░░░░░░░░░░▌     ▐░▌     ▐░░░░░░░░░░░▌
+        ▐░▌          ▐░█▀▀▀▀█░█▀▀      ▐░▌      ▀▀▀▀▀▀▀▀▀█░▌
+        ▐░▌          ▐░▌     ▐░▌       ▐░▌               ▐░▌
+        ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌  ▄▄▄▄█░█▄▄▄▄  ▄▄▄▄▄▄▄▄▄█░▌
+        ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+         ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀
+</div>
+    <img  src="imagens/documentos-v0-48ac06m2730d1.webp"width="400px" height="400px" alt="Complex" class="complex-image">
+    <audio  autoplay loop id="bg-audio">
+        <source src="morse/morse.wav" type="audio/wav">
+    </audio>
+    <p>Você tem que impedir</p>
+    <input id="password" type="password" placeholder="Enter your password" required>
+    <button id="submit" onclick="checkPassword()">Submit</button>
+
+</body>
+
+<script>
+    window.addEventListener('load', () => {
+            const audio = document.getElementById('bg-audio');
+            audio.play().catch(e => {
+                console.warn("Autoplay bloqueado pelo navegador. Será necessário interação do usuário.");
+            });
+        });
+    function checkPassword() {
+        console.log("Password check initiated.");
+        const password = document.getElementById('password').value;
+        const correctPassword = "Apocalipse"; // Substitua pela senha correta
+        
+        if (toString(password).toLowerCase === correctPassword || password === "apocalipse") {
+            window.location.href = 'Final.html'; // Redireciona para index.html se a senha estiver correta
+        } else {
+            alert('Senha incorreta! Tente novamente.');
+        }
+    }
+</script>
+</html>
