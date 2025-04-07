@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Size</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; margin-top: 300px;">
+        <img src="imagens/busto.png" width="200px" height="300px">
+        <div class="Binary" style="margin-left: 50px;">
+            <img src="imagens/acesa.png" class="lampada">
+            <img src="imagens/acesa.png" class="lampada">
+            <img src="imagens/apagada.png" class="lampada">
+        </div>
+    </div>
+        <p width="250px">Um ser que dedicou a vida aos seus sentimentos pode gerar um ser que dedique a vida a algo maior?
+            <br>Quantas vezes você já se perguntou isso?
+            <br>Quantas vezes você já se sentiu assim?
+            <br>Quantas vezes você já se imaginou vivendo?
+        </p>
+        <strong>Façamos então um Pacto, me entregue o nome de:  </strong>
+        <p class="ascii-art">
+            ███████ ██████  ██    ██ ██████      ██    ██ ██████   ██████       ██ ██   ██ ██       ██████  ██████  ██    ██ ██      ██████  
+            ██      ██   ██ ██    ██ ██   ██     ██    ██ ██   ██ ██    ██      ██  ██ ██  ██      ██    ██ ██   ██ ██    ██ ██      ██   ██ 
+            █████   ██   ██ ██    ██ ██████      ██    ██ ██   ██ ██    ██      ██   ███   ██      ██    ██ ██   ██ ██    ██ ██      ██████  
+            ██      ██   ██ ██    ██ ██   ██      ██  ██  ██   ██ ██ ▄▄ ██ ██   ██  ██ ██  ██      ██ ▄▄ ██ ██   ██ ██    ██ ██      ██   ██ 
+            ███████ ██████   ██████  ██   ██       ████   ██████   ██████   █████  ██   ██ ███████  ██████  ██████   ██████  ███████ ██   ██ 
+                                                                      ▀▀                               ▀▀                              
+        </p>
+    <input type="password" placeholder="Enter password" id="password" required>
+
+    <button onclick="checkPassword()" id="submit">submit</button>
+</body>
+    <script>
+        function checkPassword() {
+            console.log("Password check initiated.");
+            const password = document.getElementById('password').value;
+            const correctPassword = "baraosanguinario"; // Substitua pela senha correta
+            
+            if (String(password).toLowerCase().replace(" ","") === correctPassword.toLowerCase()) {
+                window.location.href = 'Final.html'; // Redireciona para index.html se a senha estiver correta
+            } else {
+                alert('Senha incorreta! Tente novamente.');
+            }
+        }
+    </script>
+</html>

@@ -35,3 +35,13 @@ input[type="password"] {
     color: hsl(0, 0%, 100%);
     font-size: 16px;
 }
+.Binary{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+}
+.lampada{
+  width:100px;
+  height:100px
+}
